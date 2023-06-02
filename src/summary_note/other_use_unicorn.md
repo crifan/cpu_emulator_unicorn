@@ -8,3 +8,5 @@
     * 安卓逆向：AndroidNativeEmu
   * unidbg
     * https://github.com/zhkl0228/unidbg
+  * 其他的，详见官网的showcase
+    * https://www.unicorn-engine.org/showcase/

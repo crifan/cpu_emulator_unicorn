@@ -4,8 +4,6 @@ TODO：
 
 * 无法跳过当前指令
   * 【未解决】unicorn模拟ARM汇编如何忽略特定指令为nop空指令
-* 给指令加hook
-  * 【未解决】unicorn中用UC_HOOK_INSN去给指令加上hook
 * 如果指令不好模拟，数量不多的话，可以考虑手动修改原始二进制
   * 比如arm64e的braa变br
     * 【已解决】Unicorn模拟ARM64代码：手动把braa改为br指令看是否还会报错UC_ERR_EXCEPTION

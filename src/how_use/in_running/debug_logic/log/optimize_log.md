@@ -9,7 +9,5 @@ TODO：
   * （批量）调试输出寄存器值
     * 【已解决】Unicorn模拟ARM代码：优化log调试打印寄存器值
     * 【已解决】Unicorn中hook时当特定位置代码时查看打印寄存器的值
-  * 打印出当前的opcode
-    * 【规避解决】Unicorn模拟ARM：去hook查看将要解码的opcode二进制
 
 ---

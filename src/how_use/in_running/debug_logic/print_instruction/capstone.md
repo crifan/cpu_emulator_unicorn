@@ -4,7 +4,6 @@ TODO：
 
 * 配合Capstone去查看反汇编代码
   * 【已解决】unicorn中用Capstone反汇编查看当前汇编代码指令
-  * 【已解决】unicorn中hook_code中查看当前要执行的二进制code代码指令数据
   * 【已解决】iOS逆向：unicorn查看当前被识别出是什么ARM汇编指令
   * 资料
     * 反汇编框架 Capstone

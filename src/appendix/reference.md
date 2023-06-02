@@ -15,3 +15,5 @@
 * [iOS Tampering and Reverse Engineering - OWASP Mobile Application Security](https://mas.owasp.org/MASTG/iOS/0x06c-Reverse-Engineering-and-Tampering/#unicorn)
 * [Unicorn & QEMU – Unicorn – The Ultimate CPU emulator (unicorn-engine.org)](https://www.unicorn-engine.org/docs/beyond_qemu.html)
 * [为什么使用汇编可以 Hook objc_msgSend（上）- 汇编基础 - 一片瓜田 (desgard.com)](https://www.desgard.com/2020/04/05/why-hook-msg_objc-can-use-asm-1.html)
+* [Opcode - Wikipedia](https://en.wikipedia.org/wiki/Opcode)
+* 
