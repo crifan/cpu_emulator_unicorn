@@ -47,7 +47,9 @@ Mapped memory: Code     [0x0000000000010000 - 0x0000000000010008]
 
 ### 实际例子中的内存布局
 
-之前自己的某个代码，经过优化后，内存布局如下：
+之前自己某个Unicorn模拟函数的代码，中的内存布局：
+
+早期是：
 
 ```bash
 Mapped memory: Code     [0x0000000000010000-0x0000000000410000]
@@ -57,4 +59,27 @@ Mapped memory: Stack    [0x0000000000700000-0x0000000000800000]
 Mapped memory: Args     [0x0000000000800000-0x0000000000810000]
 ```
 
-TODO：把相关，更新版本的内存布局的代码和输出结果，都贴过来，再解释，为何这么布局
+经过多次优化，最后是：
+
+```bash
+Mapped memory: Code    [0x00010000-0x00410000]
+                         [0x00010000-0x000124C8] func: ___lldb_unnamed_symbol2575$$akd
+                         [0x00031220-0x00033450]   fix br err: x9SmallOffset
+                         [0x00068020-0x00069B80]   fix br err: x10AbsFuncAddrWithOffset
+                         [0x00069B88-0x00069B90]   emulateFree jump
+                         [0x00069BC0-0x00069BC8]   emulateAkdFunc2567 jump
+                         [0x00069BD8-0x00069BE0]   emulateMalloc jump
+                         [0x00069BE8-0x00069BF0]   line 7392 jump
+                         [0x00069C08-0x00069C10]   emulateDemalloc jump
+                         [0x00200000-0x00200004] func: emulateMalloc
+                         [0x00220000-0x00220004] func: emulateFree
+                         [0x00280000-0x00280004] func: emulateAkdFunc2567
+Mapped memory: Libc    [0x00500000-0x00580000]
+Mapped memory: Heap    [0x00600000-0x00700000]
+Mapped memory: Stack   [0x00700000-0x00800000]
+Mapped memory: Args    [0x00800000-0x00810000]
+```
+
+具体布局的详细解释，详见后续章节：
+
+[模拟akd函数symbol2575 · CPU模拟利器：Unicorn](../../../examples/example_akd_symbol2575.md)
