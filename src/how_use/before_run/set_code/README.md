@@ -66,13 +66,39 @@ sub r1, r2, r3
 
 -》把 `\x37\x00\xA0\xE3`和`\x03\x10\x42\xE0`加起来，就是此处的二进制：`\x37\x00\xa0\xe3\x03\x10\x42\xe0` 了。
 
-### 自己遇到的实例
+### 自己的实例
 
-TODO：
+自己在后续示例
 
-把
+[模拟akd函数symbol2575 · CPU模拟利器：Unicorn](../../../examples/example_akd_symbol2575.md)
 
-/Users/crifan/dev/dev_root/iosReverse/AppleStore/AuthKit_akd/dynamicDebug/emulate_arm/unicorn_akd/emulate_akd_getIDMSRoutingInfo.py
+中，其中的设置代码的部分就是：
 
-中的 代码 二进制 如何导入的过程，整理过来
+```py
+def readBinFileBytes(inputFilePath):
+    fileBytes = None
+    with open(inputFilePath, "rb") as f:
+        fileBytes = f.read()
+    return fileBytes
 
+# for arm64: ___lldb_unnamed_symbol2575$$akd
+akd_symbol2575_FilePath = "input/akd_getIDMSRoutingInfo/arm64/akd_arm64_symbol2575.bin"
+logging.info("akd_symbol2575_FilePath=%s", akd_symbol2575_FilePath)
+ARM64_CODE_akd_symbol2575 = readBinFileBytes(akd_symbol2575_FilePath) # b'\xff\xc3\x03\xd1\xfco\t\xa9\xfag\n\xa9\xf8_\x0b\xa9\xf6W\x0c\xa9\xf4O
+```
+
+就是从，输入文件
+
+* `input/akd_getIDMSRoutingInfo/arm64/akd_arm64_symbol2575.bin`
+  * ![symbol2575_input_code_hex_view](../../../assets/img/symbol2575_input_code_hex_view.jpg)
+
+中，读取对应代码=二进制数据，供后续模拟运行的。
+
+而该文件的数据是来自于，lldb调试期间，从内存中导出的：
+
+```bash
+(lldb) memory read --binary --force --outfile /Users/crifan/dev/tmp/lldb_mem_dump/akd_arm64_symbol2575.bin 0x10485d98c 0x1048600dc
+10064 bytes written to '/Users/crifan/dev/tmp/lldb_mem_dump/akd_arm64_symbol2575.bin'
+```
+
+其中`0x10485d98c`和`0x1048600dc`是该函数的起始地址和结束地址。

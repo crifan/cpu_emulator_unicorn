@@ -13,6 +13,9 @@
 * 【已解决】Unicorn模拟arm64函数：___lldb_unnamed_symbol2575$$akd优化内存代码布局和输出日志
 * 【已解决】iPhone11中ARM汇编Stack栈指针SP的增长方向
 * 【已解决】ARM中汇编字节序的大端和小端
+* 【未解决】iOS逆向：unicorn中传递函数指针参数
+* 【已解决】Unicorn模拟arm64：PC在+4404时报错UC_ERR_MAP
+* 【已解决】Unicorn模拟ARM代码：优化给内存地址写入对应的值
 * 
 * [unicorn - 简书 (jianshu.com) ](https://www.jianshu.com/p/e6a7b30c1e89)
 * [Unicorn.js: ARM (alexaltea.github.io)](https://alexaltea.github.io/unicorn.js/demo.html?arch=arm)
