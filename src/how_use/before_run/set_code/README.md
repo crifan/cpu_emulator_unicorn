@@ -70,7 +70,7 @@ sub r1, r2, r3
 
 自己在后续示例
 
-[模拟akd函数symbol2575 · CPU模拟利器：Unicorn](../../../examples/example_akd_symbol2575.md)
+[模拟akd函数symbol2575](../../../examples/example_akd_symbol2575.md)
 
 中，其中的设置代码的部分就是：
 

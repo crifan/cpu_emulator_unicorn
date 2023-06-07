@@ -6,7 +6,7 @@
 
 ## 实例
 
-此处以后续的 [模拟akd函数symbol2575 · CPU模拟利器：Unicorn](../../../examples/example_akd_symbol2575.md) 为例，来解释特殊的情况：
+此处以后续的 [模拟akd函数symbol2575](../../../examples/example_akd_symbol2575.md) 为例，来解释特殊的情况：
 
 由于函数`___lldb_unnamed_symbol2575$$akd`做了特殊的反调试处理：代码中很多`BR`间接跳转，导致需要写入特定内存地址中，特定的值，供后续代码运行时读取，才能正常跳转到对应的行的代码，继续正确运行。
 

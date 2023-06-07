@@ -6,7 +6,7 @@
 
 ## 实例
 
-以后续 [模拟akd函数symbol2575 · CPU模拟利器：Unicorn](../../../examples/example_akd_symbol2575.md) 为例，当时此处函数要传入的参数值，分别是：
+以 [模拟akd函数symbol2575](../../../examples/example_akd_symbol2575.md) 为例，当时此处函数要传入的参数值，分别是：
 
 ```py
 #-------------------- Args --------------------

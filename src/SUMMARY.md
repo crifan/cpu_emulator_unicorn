@@ -6,6 +6,7 @@
   * [下载安装](init/download_install.md)
   * [运行测试代码](init/run_test_code.md)
 * [如何使用](how_use/README.md)
+  * [概述Unicorn核心思路](how_use/core_mind/README.md)
   * [背景知识](how_use/background/README.md)
     * [程序运行的本质](how_use/background/core_logic/README.md)
       * [CPU的核心逻辑](how_use/background/core_logic/cpu_logic.md)

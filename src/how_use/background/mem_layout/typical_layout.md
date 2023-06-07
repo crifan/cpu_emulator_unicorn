@@ -82,4 +82,4 @@ Mapped memory: Args    [0x00800000-0x00810000]
 
 具体布局的详细解释，详见后续章节：
 
-[模拟akd函数symbol2575 · CPU模拟利器：Unicorn](../../../examples/example_akd_symbol2575.md)
+[模拟akd函数symbol2575](../../../examples/example_akd_symbol2575.md)

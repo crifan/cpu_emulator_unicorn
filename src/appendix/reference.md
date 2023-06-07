@@ -16,6 +16,8 @@
 * 【未解决】iOS逆向：unicorn中传递函数指针参数
 * 【已解决】Unicorn模拟arm64：PC在+4404时报错UC_ERR_MAP
 * 【已解决】Unicorn模拟ARM代码：优化给内存地址写入对应的值
+* 【已解决】unicorn模拟ARM中LR和SP寄存器堆栈信息
+* 【已解决】unicorn中没有触发后续代码的hook函数hook_code
 * 
 * [unicorn - 简书 (jianshu.com) ](https://www.jianshu.com/p/e6a7b30c1e89)
 * [Unicorn.js: ARM (alexaltea.github.io)](https://alexaltea.github.io/unicorn.js/demo.html?arch=arm)
