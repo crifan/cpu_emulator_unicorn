@@ -13,7 +13,7 @@ TODO：
 #   arm64e: ___lldb_unnamed_symbol2540$$akd
 #   arm64: ___lldb_unnamed_symbol2575$$akd
 # Author: Crifan Li
-# Update: 20220607
+# Update: 20220608
 
 from __future__ import print_function
 import re
@@ -134,7 +134,7 @@ def writeMemory(memAddr, newValue, byteLen):
 def shouldStopEmulate(curPc, decodedInsn):
     isShouldStop = False
     # isRetInsn = decodedInsn.mnemonic == "ret"
-    isRetInsn = re.match("^ret", decodedInsn.mnemonic) # support: ret/retaa/...
+    isRetInsn = re.match("^ret", decodedInsn.mnemonic) # support: ret/retaa/retab/...
     if isRetInsn:
         isPcInsideMainCode = (curPc >= CODE_ADDRESS) and (curPc < CODE_ADDRESS_REAL_END)
         isShouldStop = isRetInsn and isPcInsideMainCode
@@ -741,6 +741,7 @@ def emulate_akd_arm64_symbol2575():
 if __name__ == '__main__':
     emulate_akd_arm64_symbol2575()
     logging.info("=" * 26)
+
 ```
 
 

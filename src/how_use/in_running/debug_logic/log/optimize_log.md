@@ -1,17 +1,5 @@
 # 优化日志输出
 
-TODO：
-
-* 调试的细节的优化=优化输出日志
-  * 优化：让输出尽量和Xcode一样 -》方便理解汇编代码
-    * 【已解决】Unicorn模拟ARM代码：优化hook打印逻辑
-    * 【已解决】Unicorn模拟ARM汇编：优化hook_code调试打印指令的输出日志
-  * （批量）调试输出寄存器值
-    * 【已解决】Unicorn模拟ARM代码：优化log调试打印寄存器值
-    * 【已解决】Unicorn中hook时当特定位置代码时查看打印寄存器的值
-
----
-
 ## 日志优化：通用且统一的方式打印寄存器值
 
 自己的实际代码 [模拟akd函数symbol2575](../../../../examples/example_akd_symbol2575.md) 中的 `hook_code` 中的这部分代码：
