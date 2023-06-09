@@ -35,6 +35,26 @@
 * 【整理】Unicorn调试心得：Capstone反汇编中有些值是计算后的结果而不是原始ARM指令中的值
 * 【已解决】unicorn模拟ARM指令：Capstone和Xcode的指令反汇编结果不一样
 * 【已解决】Unicorn模拟arm64：判断遇到指令ret时结束停止模拟
+* 【未解决】unicorn模拟ARM汇编如何忽略特定指令为nop空指令
+* 【已解决】Unicorn模拟ARM64代码：手动把braa改为br指令看是否还会报错UC_ERR_EXCEPTION
+* 【未解决】Unicorn模拟arm：函数___lldb_unnamed_symbol2575$$akd模拟完毕但是没有生成要的结果
+* 【未解决】iOS逆向akd：用Unicorn模拟运行arm64的akd函数sub_1000A0460的opcode代码
+* 【已解决】Unicorn模拟arm64代码：___lldb_unnamed_symbol2575$$akd调用子函数___lldb_unnamed_symbol2567$$akd
+* 【未解决】Unicorn模拟arm：给___lldb_unnamed_symbol2567$$akd函数准备调试环境
+* 【未解决】研究对比___lldb_unnamed_symbol2575$$akd的+4448到+8516的逻辑的真实过程和模拟过程之间的差异
+* 【已解决】iOS逆向akd之Unicorn模拟arm64代码：PC在0x64378时出错Memory UNMAPPED at 0x0
+* 【已解决】Unicorn模拟arm64：PC在+7428时blr x8报错UC_ERR_MAP
+* 【已解决】Unicorn模拟arm64：PC在+9296时报错UC_ERR_MAP 0xFFFFFFFFFFFFFFFE
+* 【已解决】Unicorn模拟arm64代码：PC在+552时报错ERROR Invalid memory mapping 
+* 【已解决】Unicorn模拟arm64：PC在+4448时报错UC_ERR_MAP at 0xFFFFFFFFFFFFFFFDUC_ERR_MAP
+* 【已解决】Unicorn模拟arm64：PC在+7396时UC_ERR_MAP出错0xFFFFFFFFFFFFFFFE
+* 【已解决】iOS逆向akd用Unicorn模拟代码：PC在0x000100CC时报错Invalid memory mapping UC_ERR_MAP 0xFFFFFFFFFFFFFFFE
+* 【已解决】iOS逆向akd用Unicorn模拟ARM：PC在0x0001011C时出错Invalid memory mapping UC_ERR_MAP
+* 【已解决】Unicorn模拟arm64：PC在+4404时报错UC_ERR_MAP
+* 【已解决】iOS逆向akd之Unicorn模拟arm64代码：PC在0x00010088时出错br跳转0地址
+* 【已解决】unicorn模拟ARM64代码报错：ERROR Invalid memory mapping UC_ERR_MAP
+* 【已解决】Unicorn模拟ARM代码出错：Memory UNMAPPED at 0x24C6
+* 【未解决】Unicorn模拟ARM代码出错：PC是0x10090时Memory UNMAPPED at 0x100AF6C88
 * 
 * [unicorn - 简书 (jianshu.com) ](https://www.jianshu.com/p/e6a7b30c1e89)
 * [Unicorn.js: ARM (alexaltea.github.io)](https://alexaltea.github.io/unicorn.js/demo.html?arch=arm)

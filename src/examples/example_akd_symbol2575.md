@@ -1,12 +1,33 @@
 # 模拟akd函数symbol2575
 
-TODO：
+此处整个项目的文件架构
 
-再去把相关附件文件 也贴出来，和加上具体解释，或者指向之前的具体章节有详细解释。
+```bash
+➜  unicorn_akd git:(master) ✗ pwd
+/Users/crifan/xxx/dynamicDebug/emulate_arm/unicorn_akd
 
----
+➜  unicorn_akd git:(master) ✗ tree .
+...
+├── debug
+│   └── log
+├── emulate_akd_getIDMSRoutingInfo.py
+├── input
+│   └── akd_getIDMSRoutingInfo
+│       ├── arm64
+│       │   ├── akd_arm64_symbol2575.bin
+├── libs
+│   ├── UnicornSimpleHeap.py
+│   └── crifan
+│       └── crifanLogging.py
+```
 
-## 文件: `emulate_akd_getIDMSRoutingInfo.py`
+## 输入文件：`akd_arm64_symbol2575.bin`
+
+下载地址：[akd_arm64_symbol2575.bin](../assets/files/akd_arm64_symbol2575.bin)
+
+## 核心代码: `emulate_akd_getIDMSRoutingInfo.py`
+
+### 代码
 
 ```py
 # Function: Use Unicorn to emulate akd +[AKADIProxy getIDMSRoutingInfo:forDSID:] internal implementation function code to running
@@ -744,8 +765,7 @@ if __name__ == '__main__':
 
 ```
 
-
-### 输出log举例
+### 输出log
 
 ```bash
 20230607 23:01:51 emulate_akd_getIDMSRoutingInfo.py:157  INFO    Output log to debug/log/emulate_akd_getIDMSRoutingInfo_20230607_230151.log
@@ -986,7 +1006,13 @@ if __name__ == '__main__':
 ...
 ```
 
-## 文件: `libs/UnicornSimpleHeap.py`
+### 代码解释
+
+TODO：
+
+把各自的部分的解释，分别列出来对应的位置。
+
+## 辅助代码: `libs/UnicornSimpleHeap.py`
 
 ```py
 # Function: Emulate memory management (malloc/free/...)
@@ -1158,3 +1184,9 @@ class UnicornSimpleHeap(object):
                     # Force a memory-based crash
                     uc.force_crash(UcError(UC_ERR_READ_PROT))
 ```
+
+## 辅助代码：`crifanLogging.py`
+
+可从[crifanLibPython](https://github.com/crifan/crifanLibPython/)中下载到源码：
+
+* [crifanLogging.py](https://github.com/crifan/crifanLibPython/blob/master/python3/crifanLib/crifanLogging.py)
