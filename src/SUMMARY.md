@@ -45,7 +45,7 @@
     * [UC_ERR_WRITE_UNMAPPED](summary_note/common_issue/uc_err_write_unmapped.md)
   * [手动修改指令](summary_note/manual_change_opcode.md)
   * [数值转换](summary_note/value_convert.md)
-  * [ARM64和arm64e](summary_note/arm64_armm64.md)
+  * [ARM64和arm64e](summary_note/arm64_arm64e.md)
   * [调用其他子函数](summary_note/call_other_func/README.md)
     * [模拟函数实现](summary_note/call_other_func/emu_func_impl.md)
   * [用到Unicorn的](summary_note/other_use_unicorn.md)

@@ -2,22 +2,22 @@
 
 先明白一下常说的概念和逻辑：
 
-* 指令=instruction == 代码=code == 操作码=opcode == 二进制(数据) == binary (data)
+* `指令`=`instruction` == `代码`=`code` == `操作码`=`opcode` == `二进制`(`数据`) == `binary` (`data`)
 
 分别解释大概的含义：
 
-* 指令 = instruction
+* `指令` = `instruction`
   * 往往是底层会汇编代码级别，才会用到这个名词，指令。
   * 比如：ARM汇编指令
-* 代码 = code
+* `代码` = `code`
   * 往往是高级语言常用到的名字
   * 比如：iOS的ObjC的代码
-* 操作码 = opcode = operation code
-  * = 操作机器的代码
+* `操作码` = `opcode` = `operation code`
+  * = **操作机器的代码**
     * 机器 = CPU -》 操作CPU（让其按照你的预期）去工作的代码
   * 往往是底层某个架构对应的指令集中才会用到这个名字，opcode
   * 比如：ARM指令集特定的指令的opcode
-* 二进制（数据） = binary (data)
+* `二进制`（`数据`） = `binary` (`data`)
   * 最底层的硬件中所保存的数据，都是0101的形式的二进制数据
 
 综合起来就是：

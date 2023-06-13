@@ -36,7 +36,6 @@
 * 【已解决】unicorn模拟ARM指令：Capstone和Xcode的指令反汇编结果不一样
 * 【已解决】Unicorn模拟arm64：判断遇到指令ret时结束停止模拟
 * 【未解决】unicorn模拟ARM汇编如何忽略特定指令为nop空指令
-* 【已解决】Unicorn模拟ARM64代码：手动把braa改为br指令看是否还会报错UC_ERR_EXCEPTION
 * 【未解决】Unicorn模拟arm：函数___lldb_unnamed_symbol2575$$akd模拟完毕但是没有生成要的结果
 * 【未解决】iOS逆向akd：用Unicorn模拟运行arm64的akd函数sub_1000A0460的opcode代码
 * 【已解决】Unicorn模拟arm64代码：___lldb_unnamed_symbol2575$$akd调用子函数___lldb_unnamed_symbol2567$$akd
@@ -55,6 +54,38 @@
 * 【已解决】unicorn模拟ARM64代码报错：ERROR Invalid memory mapping UC_ERR_MAP
 * 【已解决】Unicorn模拟ARM代码出错：Memory UNMAPPED at 0x24C6
 * 【未解决】Unicorn模拟ARM代码出错：PC是0x10090时Memory UNMAPPED at 0x100AF6C88
+* 【已解决】Unicorn模拟arm64代码：尝试批量一次性解决全部的br跳转导致内存映射错误UC_ERR_MAP
+* 【已解决】Unicorn模拟arm64代码：搞懂___lldb_unnamed_symbol2575$$akd函数br跳转涉及到的固定的值的内存范围
+* 【已解决】Unicorn模拟arm64代码：计算br跳转涉及到的x10函数偏移量地址的合适的范围
+* 【已解决】Unicorn模拟arm64代码：计算br跳转涉及到的x9的合适的范围
+* 【已解决】Unicorn模拟arm64代码：导出lldb调试时x9和x10两个段的实际数据值到文件
+* 【已解决】Unicorn模拟arm64：修正导出的x10的带偏移量的函数地址
+* 【已解决】Unicorn模拟arm64代码：把导出的x9和x10的2段数据导入到Unicorn模拟代码中
+* 【已解决】unicorn代码报错：ERROR Invalid memory write UC_ERR_WRITE_UNMAPPED
+* 【已解决】unicorn模拟ARM64代码：给UC_ERR_WRITE_UNMAPPED单独加上hook看出错时详情
+* 【已解决】Unicorn模拟ARM64代码：手动把braa改为br指令看是否还会报错UC_ERR_EXCEPTION
+* 【已解决】通过修改ARM汇编二进制文件实现Unicorn忽略执行特定指令
+* 【已解决】Python中把byteaddary转成64位的unsigned long long的数值
+* 【已解决】Python中把int值转换成字节bytes
+* 【已解决】unicorn代码mem_read报错：mem_read() missing 1 required positional argument size
+* 【已解决】Unicorn模拟ARM代码：写入正确的地址但是读取出来数据值仍旧是错的
+* 【已解决】Unicorn模拟ARM代码：mem_read内存读取的值和ldr指令加载出来的值不一样
+* 【已解决】Unicorn模拟ARM：用内存映射并写入地址0x75784的内容
+* 【已解决】Unicorn中Python中的ARM64的CPSR寄存器定义
+* 【未解决】unicorn如何模拟ARM中PAC指令pacibsp
+* 【未解决】iOS逆向：用unicorn模拟执行arm64e的arm汇编代码
+* 【未解决】Unicorn模拟ARM代码报错：ERROR Unhandled CPU exception UC_ERR_EXCEPTION
+* 【已解决】Unicorn模拟ARM64的函数中调用其他子函数
+* 【未解决】Unicorn模拟arm：确保子函数___lldb_unnamed_symbol2567$$akd参数值正确
+* 【已解决】Unicorn模拟arm64代码：模拟___lldb_unnamed_symbol2567$$akd直接返回值
+* 【已解决】Unicorn模拟ARM64：模拟造出返回特定值的空函数的arm汇编代码的opcode
+* 【已解决】Unicorn模拟ARM64代码：参考afl-unicorn的UnicornSimpleHeap模拟malloc
+* 【已解决】Unicorn模拟ARM64：如何模拟malloc分配内存
+* 【已解决】Unicorn模拟ARM：模拟malloc报错内存重叠Heap over underflow
+* 【已解决】Unicorn模拟malloc内存分配：返回重复内存地址
+* 【已解决】Unicorn模拟arm64：模拟free释放内存
+* 【已解决】Unicorn模拟arm64：模拟vm_deallocate释放内存
+* 【未解决】iOS逆向：如何反代码混淆反混淆去混淆
 * 
 * [unicorn - 简书 (jianshu.com) ](https://www.jianshu.com/p/e6a7b30c1e89)
 * [Unicorn.js: ARM (alexaltea.github.io)](https://alexaltea.github.io/unicorn.js/demo.html?arch=arm)
@@ -65,4 +96,9 @@
 * [[原创] Unicorn 在 Android 的应用-『Android安全』-看雪安全论坛](https://bbs.pediy.com/thread-253868.htm)
 * [Programming with Python language – Capstone – The Ultimate Disassembler (capstone-engine.org)](http://www.capstone-engine.org/lang_python.html)
 * [capstone/bindings/python at master · capstone-engine/capstone · GitHub](https://github.com/capstone-engine/capstone/tree/master/bindings/python)
+* [Unicorn快速入门 - iPlayForSG - 博客园 (cnblogs.com)](https://www.cnblogs.com/Here-is-SG/p/17080180.html)
+* [Online ARM to HEX Converter (armconverter.com)](https://armconverter.com/?code=ret)
+* [Showcases – Unicorn – The Ultimate CPU emulator](https://www.unicorn-engine.org/showcase/)
+* [afl-unicorn: Fuzzing Arbitrary Binary Code | by Nathan Voss | HackerNoon.com | Medium](https://medium.com/hackernoon/afl-unicorn-fuzzing-arbitrary-binary-code-563ca28936bf)
+* [afl-unicorn/unicorn_loader.py at master · Battelle/afl-unicorn · GitHub](https://github.com/Battelle/afl-unicorn/blob/master/unicorn_mode/helper_scripts/unicorn_loader.py)
 * 

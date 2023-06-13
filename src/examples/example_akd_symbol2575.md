@@ -27,6 +27,31 @@
 
 ## 核心代码: `emulate_akd_getIDMSRoutingInfo.py`
 
+### 代码解释
+
+在贴出代码`emulate_akd_getIDMSRoutingInfo`之前，先给出代码的解释，详见之前的各个章节：
+
+* 运行前
+  * [内存布局](../how_use/background/mem_layout/typical_layout.md)
+  * [设置代码](../how_use/before_run/set_code/README.md)
+  * [函数参数](../how_use/before_run/set_other/func_para.md)
+  * [相关数据](../how_use/before_run/set_other/related_data.md)
+  * [Stack栈](../how_use/before_run/set_other/stack.md)
+  * [Heap堆](../how_use/before_run/set_other/heap.md)
+* 运行中
+  * [开始运行](../how_use/in_running/start_running.md)
+  * 调试逻辑
+    * hook
+      * [hook代码](../how_use/in_running/debug_logic/hook/hook_code/README.md)
+      * [hook内存](../how_use/in_running/debug_logic/hook/hook_mem.md)
+      * [hook异常](../how_use/in_running/debug_logic/hook/hook_exception.md)
+    * 日志
+      * [优化日志输出](../how_use/in_running/debug_logic/log/optimize_log.md)
+    * [用Capstone查看当前指令](../how_use/in_running/debug_logic/print_instruction/capstone.md)
+* 运行后
+  * [停止运行](../how_use/after_run/stop.md)
+  * [获取结果](../how_use/after_run/get_result.md)
+
 ### 代码
 
 ```py
@@ -116,9 +141,9 @@ def readMemory(memAddr, byteNum, endian="little", signed=False):
     global uc
     readoutRawValue = uc.mem_read(memAddr, byteNum)
     logging.info(" >> readoutRawValue hex=0x%s", readoutRawValue.hex())
-    readoutValueLong = int.from_bytes(readoutRawValue, endian, signed=signed)
-    logging.info(" >> readoutValueLong=0x%016X", readoutValueLong)
-    return readoutValueLong
+    readoutValue = int.from_bytes(readoutRawValue, endian, signed=signed)
+    logging.info(" >> readoutValue=0x%016X", readoutValue)
+    return readoutValue
 
 def writeMemory(memAddr, newValue, byteLen):
     """
@@ -1006,12 +1031,6 @@ if __name__ == '__main__':
 ...
 ```
 
-### 代码解释
-
-TODO：
-
-把各自的部分的解释，分别列出来对应的位置。
-
 ## 辅助代码: `libs/UnicornSimpleHeap.py`
 
 ```py
@@ -1187,6 +1206,8 @@ class UnicornSimpleHeap(object):
 
 ## 辅助代码：`crifanLogging.py`
 
-可从[crifanLibPython](https://github.com/crifan/crifanLibPython/)中下载到源码：
+如果用Python代码（去使用Unicorn），则其中的日志打印，可以参考：`crifanLibPython.py`
+
+其具体完整的最新的代码，可从[crifanLibPython](https://github.com/crifan/crifanLibPython/)中下载到源码：
 
 * [crifanLogging.py](https://github.com/crifan/crifanLibPython/blob/master/python3/crifanLib/crifanLogging.py)

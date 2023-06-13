@@ -83,3 +83,35 @@ Mapped memory: Args    [0x00800000-0x00810000]
 具体布局的详细解释，详见后续章节：
 
 [模拟akd函数symbol2575](../../../examples/example_akd_symbol2575.md)
+
+## 其他一些内存布局
+
+[afl-unicorn: Fuzzing Arbitrary Binary Code | by Nathan Voss | HackerNoon.com | Medium](https://medium.com/hackernoon/afl-unicorn-fuzzing-arbitrary-binary-code-563ca28936bf)
+
+中的Unicorn的内存布局：
+
+```bash
+# Memory map for the code to be tested
+CODE_ADDRESS = 0x00100000 # Arbitrary address where code to test will be loaded
+CODE_SIZE_MAX = 0x00010000 # Max size for the code (64kb)
+STACK_ADDRESS = 0x00200000 # Address of the stack (arbitrarily chosen)
+STACK_SIZE = 0x00010000 # Size of the stack (arbitrarily chosen)
+DATA_ADDRESS = 0x00300000 # Address where mutated data will be placed
+DATA_SIZE_MAX = 0x00010000 # Maximum allowable size of mutated data
+```
+
+另外，其中还有一些更加细节的内容，比如
+
+* 初始化寄存器 `__load_registers`
+* 映射内存 的 同时设置读写属性 -》用于内存保护
+
+可供参考。
+
+以及：
+
+[afl-unicorn/unicorn_loader.py at master · Battelle/afl-unicorn · GitHub](https://github.com/Battelle/afl-unicorn/blob/master/unicorn_mode/helper_scripts/unicorn_loader.py)
+
+中的：
+
+* `__map_segments`
+  * `__map_segment`
