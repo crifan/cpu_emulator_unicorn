@@ -34,7 +34,6 @@
       * [打印日志](how_use/in_running/debug_logic/log/README.md)
         * [优化日志输出](how_use/in_running/debug_logic/log/optimize_log.md)
       * [查看当前指令](how_use/in_running/debug_logic/print_instruction/README.md)
-        * [Capstone](how_use/in_running/debug_logic/print_instruction/capstone.md)
   * [运行后](how_use/after_run/README.md)
     * [停止运行](how_use/after_run/stop.md)
     * [获取结果](how_use/after_run/get_result.md)

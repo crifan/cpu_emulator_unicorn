@@ -27,13 +27,8 @@
 * 【已解决】Unicorn中hook时当特定位置代码时查看打印寄存器的值
 * 【规避解决】Unicorn模拟ARM：去hook查看将要解码的opcode二进制
 * 【已解决】unicorn中hook_code中查看当前要执行的二进制code代码指令数据
-* 【已解决】unicorn中用Capstone反汇编查看当前汇编代码指令
 * 【已解决】iOS逆向：unicorn查看当前被识别出是什么ARM汇编指令
-* 反汇编框架 Capstone
-* 【已解决】Mac中安装和初始化Capstone去显示反汇编代码
 * 【已解决】Unicorn模拟arm64e代码时把mov识别成movz
-* 【整理】Unicorn调试心得：Capstone反汇编中有些值是计算后的结果而不是原始ARM指令中的值
-* 【已解决】unicorn模拟ARM指令：Capstone和Xcode的指令反汇编结果不一样
 * 【已解决】Unicorn模拟arm64：判断遇到指令ret时结束停止模拟
 * 【未解决】unicorn模拟ARM汇编如何忽略特定指令为nop空指令
 * 【未解决】Unicorn模拟arm：函数___lldb_unnamed_symbol2575$$akd模拟完毕但是没有生成要的结果
@@ -86,6 +81,8 @@
 * 【已解决】Unicorn模拟arm64：模拟free释放内存
 * 【已解决】Unicorn模拟arm64：模拟vm_deallocate释放内存
 * 【未解决】iOS逆向：如何反代码混淆反混淆去混淆
+* 
+* [反汇编利器：Capstone](https://book.crifan.org/books/ultimate_disassembler_capstone/website/)
 * 
 * [unicorn - 简书 (jianshu.com) ](https://www.jianshu.com/p/e6a7b30c1e89)
 * [Unicorn.js: ARM (alexaltea.github.io)](https://alexaltea.github.io/unicorn.js/demo.html?arch=arm)
