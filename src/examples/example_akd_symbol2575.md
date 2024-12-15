@@ -1,5 +1,11 @@
 # 模拟akd函数symbol2575
 
+完整代码详见：
+
+* [crifan/UnicornEmulateTemplate: Unicorn Emulate Template](https://github.com/crifan/UnicornEmulateTemplate)
+
+---
+
 此处整个项目的文件架构
 
 ```bash
